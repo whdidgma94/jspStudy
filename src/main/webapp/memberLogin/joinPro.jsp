@@ -20,8 +20,11 @@
 	}else{
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
+		int age = Integer.parseInt(request.getParameter("age"));
+		String email = request.getParameter("email");
+		String phone = request.getParameter("phone");
 		String gender = request.getParameter("gender");
-		MemberDAO.getInstance().addMember(id, pw, name, gender);
+		MemberDAO.getInstance().addMember(id, pw, name, age, email, phone, gender);
  	%>
  	<script>
 		alert("<%= name %> 님 회원가입 완료");

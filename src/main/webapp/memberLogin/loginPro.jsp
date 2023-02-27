@@ -19,9 +19,9 @@
 		location.href="loginForm.jsp";
 		</script>
 		<%
-	}else if(MemberDAO.getInstance().checkPw(pw, idx)&&idx==0){
+	}else if(MemberDAO.getInstance().checkPw(pw,idx)&&idx==0){
 		response.sendRedirect("adminMain.jsp");
-	}else if(MemberDAO.getInstance().checkPw(pw, idx)){
+	}else if(MemberDAO.getInstance().checkPw(pw,idx)){
 		session.setAttribute("idx", idx);
 		response.sendRedirect("main.jsp");
 	}else{%>

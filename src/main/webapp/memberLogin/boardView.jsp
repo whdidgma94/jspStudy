@@ -3,12 +3,7 @@
 <%@page import="Board.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
+<%@ include file="header.jsp" %>
 <body>
 	<%
 	int num = Integer.parseInt(request.getParameter("num"));
@@ -20,10 +15,11 @@
 		}
 	}
 	%>
-	<table border="1">
+	<table class="table">
 	<tr><td colspan="2"><%=board.getTitle()%></td> </tr>
 	<tr><td><%=board.getWriter()%></td><td><%=board.getDate()%></td></tr>
-	<tr><td colspan="2"><%=board.getContent()%></td></tr>
+	<tr><th>내용은 <br></th>
+	<td colspan="2"><%=board.getContent()%></td></tr>
 	<tr> 
 	<td colspan = "2">
 	 <button onclick = "location.href='boardMain.jsp'">목록으로</button>
@@ -32,7 +28,7 @@
 	 if(idx!=null){
 	 String id = MemberDAO.getInstance().getAMember((int)idx).getId();
 	 if(board.getWriterId().equals(id)){%>
-		 <button onclick = "location.href='boardMain.jsp'">삭제하기</button>
+		 <button onclick = "location.href='boardDelete.jsp'">삭제하기</button>
 	 <%}
 	 }
 	 %>

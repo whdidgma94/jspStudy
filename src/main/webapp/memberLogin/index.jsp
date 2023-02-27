@@ -10,7 +10,7 @@
 <body>
 	<%
 	if(MemberDAO.getInstance().getAllMemberList().size()==0){
-	MemberDAO.getInstance().addMember("admin", "admin", "관리자", "남자");
+	MemberDAO.getInstance().addMember("admin", "admin", "관리자", 28,"admin@admin","010-1234-5678","남자");
 	}
 	response.sendRedirect("main.jsp");
 	%>
