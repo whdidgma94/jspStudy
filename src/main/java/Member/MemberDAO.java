@@ -121,7 +121,7 @@ public class MemberDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
-			dbClose();
+			dbClose(); 
 		}
 	}
 	private void dbClose() {
