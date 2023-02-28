@@ -111,12 +111,12 @@ public class MemberDAO {
 		}
 		return false;
 	}
-	public void deleteMember(int idx) {
-		String sql = "delete from member where num=?";
+	public void deleteMember(String id) {
+		String sql = "delete from member where id=?";
 		getConnect();
 		try {
 			ps=conn.prepareStatement(sql);
-			ps.setInt(1, idx+1);
+			ps.setString(1, id);
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

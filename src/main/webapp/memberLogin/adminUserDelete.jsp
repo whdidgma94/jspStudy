@@ -11,8 +11,7 @@
 	<%
 	request.setCharacterEncoding("utf-8");
 	String id = request.getParameter("id");
-	int idx = MemberDAO.getInstance().checkId(id);
-	MemberDAO.getInstance().deleteMember(idx);
+	MemberDAO.getInstance().deleteMember(id);
 	response.sendRedirect("adminUserList.jsp");
 	%>
 </body>

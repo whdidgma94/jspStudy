@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="header.jsp" %>
 <body>
-	<form action="loginPro.jsp" method="post">
+	<form action="<%=request.getContextPath()%>/login.do" method="post">
 	<table border="1">
 		<tr><td>아이디</td><td><input type="text" name="id"></td></tr>
 		<tr><td>비밀번호</td><td><input type="text" name="pw"></td></tr>

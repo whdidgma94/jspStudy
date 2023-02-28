@@ -19,7 +19,6 @@
 	<%}else{%>
 		<td><a href="logoutPro.jsp">로그아웃</a></td>
 		<td><a href="updateForm.jsp">회원정보수정</a></td>
-		<td><a href="deleteForm.jsp">회원탈퇴</a></td>
 	<%}%>
 	</tr>
 	</table>
